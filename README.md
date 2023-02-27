@@ -9,6 +9,10 @@
 ### Connectors used
 - JST GH series 9 pin
 
+### IMPORTANT!
+- The encoder board PCB should be 1mm thick
+- The ODRive board can be any thickness you like
+
 ### Status
 - schematic capture and layout are done
 - waiting on boards for testing
