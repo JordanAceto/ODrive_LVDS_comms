@@ -6,13 +6,28 @@
 - The goal is to increase noise immunity and have convenient connectors
 - One Odrive board can connect to two encoder boards
 
+---
+
 ### Connectors used
 - JST GH series 9 pin
 
-### IMPORTANT!
+---
+
+### IMPORTANT NOTE 1
 - The encoder board PCB should be 1mm thick
 - The ODRive board can be any thickness you like
 
+---
+
+### IMPORTANT NOTE 2
+- The two SN65LVDS050PW chips on the ODrive board will conflict if you use only one motor at a time
+- Setting the chip select line high for a given SN65LVDS050PW chip puts its SDI pin into a high impedance state
+- If the chip select line is low or not active, the SN65LVDS050PW chip will assert its output on the shared SDI line
+- When using only 1 motor there are two options:
+  - set the chip select line for the unused SN65LVDS050PW permanently high
+  - only solder one SN65LVDS050PW chip
+
+---
+
 ### Status
-- schematic capture and layout are done
-- waiting on boards for testing
+- test build done, safe to order boards
